@@ -2,14 +2,14 @@
   "name": "prazdniny",
   "short_name": "prazdniny",
   "description": "nadchazejici prazdniny",
-  "start_url": "/prazdniny/",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",
   "icons":
   [
     {
-      "src": "/prazdniny/favicon.png",
+      "src": "favicon.png",
       "sizes": "4500x4500",
       "type": "image/png"
     }
