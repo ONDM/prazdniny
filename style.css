@@ -58,7 +58,6 @@ body
 .targetDate
 {
   font-size: 18px;
-  /*font-family: 'font', Arial, sans-serif;*/
   margin-bottom: 10px;
   font-weight: bold;
   color: #ece9e9;
@@ -69,7 +68,6 @@ body
 .countdown
 {
   font-size: 15px;
-  /*font-family: 'font', Arial, sans-serif;*/
   font-weight: normal;
   margin-top: 20px;
   color: #c2c1c1;
@@ -80,7 +78,6 @@ body
 #nadpis
 {
   font-size: 30px;
-  /*font-family: 'font', Arial, sans-serif;*/
   color: #b1afaf;
   transform: translateY(50px);
   margin: 0px auto;
@@ -104,7 +101,6 @@ body
 
 #info-overlay
 {
-  /*font-family: 'font', Arial, sans-serif;*/
   display: none;
   position: fixed;
   top: 0;
@@ -119,7 +115,6 @@ body
 
 #info-box
 {
-  /*font-family: 'font', Arial, sans-serif;*/
   background: rgba(0, 0, 0, 0.8);
   padding: 20px;
   height: 150px;
