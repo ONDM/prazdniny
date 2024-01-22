@@ -11,7 +11,7 @@ self.addEventListener('install', (event) =>
         '/prazdniny/style.css',
         '/prazdniny/script.js',
         '/prazdniny/favicon.png',
-        '/prazdniny/font.woff2',
+        '/prazdniny/font/font1.woff2',
         '/prazdniny/sw.js',
       ]);
     })
