@@ -1,0 +1,174 @@
+body
+{
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 50px;
+  background: radial-gradient(circle at center, #282829, #0a0a0a);
+  overflow: hidden;
+  /*height: 150vh;
+  overflow-y: scroll;*/
+}
+
+.date-container
+{
+  padding: 20px;
+  cursor: help;
+  text-align: left;
+  margin: 0px auto;
+  display: block;
+  border-radius: 40px;
+  width: 200px;
+  margin-bottom: 30px;
+  transform: translateY(80px);
+  animation: colorChange 45s linear infinite, glow 40s linear infinite;
+}
+
+@keyframes glow
+{
+  0%, 100%
+  {
+    box-shadow: 0 0 15px rgba(124, 128, 131, 0.8);
+  }
+  15%
+  {
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.8);
+  }
+  30%
+  {
+    box-shadow: 0 0 15px rgba(231, 76, 60, 0.8);
+  }
+  45%
+  {
+    box-shadow: 0 0 15px rgba(46, 204, 113, 0.8);
+  }
+  60%
+  {
+    box-shadow: 0 0 15px rgba(243, 156, 18, 0.8);
+  }
+  75%
+  {
+    box-shadow: 0 0 15px rgba(155, 89, 182, 0.8);
+  }
+  90%
+  {
+    box-shadow: 0 0 15px rgba(26, 188, 156, 0.8);
+  }
+}
+
+.targetDate
+{
+  font-size: 18px;
+  font-family: 'font', Arial, sans-serif;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #ece9e9;
+  text-align: center;
+  line-height: 0.5;
+}
+
+.countdown
+{
+  font-size: 15px;
+  font-family: 'font', Arial, sans-serif;
+  font-weight: normal;
+  margin-top: 20px;
+  color: #c2c1c1;
+  text-align: center;
+  line-height: 0.5;
+}
+
+#nadpis
+{
+  font-size: 30px;
+  font-family: 'font', Arial, sans-serif;
+  color: #b1afaf;
+  transform: translateY(50px);
+  margin: 0px auto;
+  margin-bottom: 35px;
+}
+
+#ond
+{
+  color: #6b6b6b;
+  margin: 0px auto;
+  transform: translateY(40px);
+}
+
+@font-face
+{
+  font-family: 'font';
+  src: url('font.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#info-overlay
+{
+  font-family: 'font', Arial, sans-serif;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#info-box
+{
+  font-family: 'font', Arial, sans-serif;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  height: 150px;
+  width: 270px;
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+}
+
+#info-title
+{
+  font-size: 20px;
+  text-align: center;
+  transform: translateY(20px);
+}
+
+#info-content
+{
+  font-size: 16px;
+  text-align: center;
+  transform: translateY(40px);
+}
+
+
+
+
+
+/* OBSAH PRO OSTATNÍ ZAŘÍZENÍ */
+/* IPHONE SE 2020 */
+@media only screen and (max-width: 375px)
+{
+  .date-container
+  {
+    width: 85%;
+    transform: translateY(125px);
+  }
+
+  #nadpis
+  {
+    font-size: 25px;
+    transform: translateY(30px);
+    margin-bottom: -60px;
+  }
+
+  #ond
+  {
+    color: #6b6b6b;
+    margin: 0px auto;
+    transform: translateY(25px);
+  }
+}
