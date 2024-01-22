@@ -87,8 +87,8 @@ document.addEventListener("DOMContentLoaded", function ()
 {
   const snowflakesContainer = document.getElementById("snowflakes-container");
   const currentDate = new Date();
-  const startDate = new Date(currentDate.getFullYear(), 0, 20);    // datum se indexuje od 0 po 11, takže 0 = leden a 11 = prosinec
-  const endDate = new Date(currentDate.getFullYear(), 0, 30);    // datum se indexuje od 0 po 11, takže 0 = leden a 11 = prosinec
+  const startDate = new Date(currentDate.getFullYear(), 11, 10);    // datum se indexuje od 0 po 11, takže 0 = leden a 11 = prosinec
+  const endDate = new Date(currentDate.getFullYear(), 0, 1);    // datum se indexuje od 0 po 11, takže 0 = leden a 11 = prosinec
 
   if (currentDate >= startDate && currentDate < endDate)
   {
