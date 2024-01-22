@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nadcházející prázdniny</title>
+    <link rel="stylesheet" href="/prazdniny/style.css">
+  <script src="script.js"></prazdniny/script>
+  <script src="sw.js"></prazdniny/script>
+  <link rel="manifest" href="/prazdniny/manifest.json">
+  <link rel="icon" type="icon" href="favicon.png">
+</head>
+
+<body>
+  <!-- NADPIS -->
+  <div id="ond">OND</div>
+  <div id="nadpis">Nadcházející prázdniny</div>
+  <!-- PRVNÍ DATUM -->
+  <div class="date-container" data-target-date="2024-02-02" data-info-title="Pololetní prázdniny" data-info="2. 2. 2024 - pátek" onclick="showInfo(this)">
+    <div class="targetDate">2. 2. 2024</div>
+    <div class="countdown"></div>
+  </div>
+  <!-- DRUHÉ DATUM -->
+  <div class="date-container" data-target-date="2024-02-05" data-info-title="Jarní prázdniny" data-info="5. 2. 2024 - 11. 2. 2024\n pondělí - neděle" onclick="showInfo(this)">
+    <div class="targetDate">5. 2. 2024</div>
+    <div class="countdown"></div>
+  </div>
+  <!-- TŘETÍ DATUM -->
+  <div class="date-container" data-target-date="2024-03-28" data-info-title="Velikonoční prázdniny" data-info="28. 3. 2024 - čtvrtek\n\n29. 3. (pá) a 1. 4. (po) je svátek" onclick="showInfo(this)">
+    <div class="targetDate">28.3.2024</div>
+    <div class="countdown"></div>
+  </div>
+  <!-- ČTVRTÉ DATUM -->
+  <div class="date-container" data-target-date="2024-06-29" data-info-title="Letní prázdniny" data-info="29. 6. 2024 - 2. 9. 2024\nsobota - neděle" onclick="showInfo(this)">
+    <div class="targetDate">29.6.2024</div>
+    <div class="countdown"></div>
+  </div>
+
+  <!-- INFO BOX -->
+  <div id="info-overlay" onclick="hideInfo()">
+    <div id="info-box">
+      <h2 id="info-title">Podrobnosti</h2>
+      <p id="info-date"></p>
+      <p id="info-content"></p>
+    </div>
+  </div>
+
+</body>
+
+</html>
