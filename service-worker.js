@@ -6,13 +6,14 @@ self.addEventListener('install', (event) =>
     caches.open(cacheName).then((cache) =>
     {
       return cache.addAll([
-        '/prazdniny/',
-        '/prazdniny/manifest.json',
-        '/prazdniny/style.css',
-        '/prazdniny/script.js',
-        '/prazdniny/favicon.png',
-        '/prazdniny/font.woff2',
-        '/prazdniny/sw.js',
+        '/',
+        '/manifest.json',
+        'style.css',
+        'script.js',
+        'favicon.png',
+        'font/font1.woff2',
+        'font/font2.woff2',
+        'sw.js',
       ]);
     })
   );
