@@ -1,7 +1,7 @@
 // SERVICE-WORKER STATUS
 if ('serviceWorker' in navigator)
 {
-  navigator.serviceWorker.register('/service-worker.js')
+  navigator.serviceWorker.register('/prazdniny/service-worker.js')
   .then((registration) =>
   {
     console.log('Service Worker zaregistrován:', registration);
