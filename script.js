@@ -26,19 +26,20 @@ document.addEventListener('DOMContentLoaded', function()
       var timeDifference = targetDate - currentDate;
       if (timeDifference > 0)
       {
-        var days = Math.floor(timeDifference / (24 * 60 * 60 * 1000));
-        var remainingText = "Zbývá ";
+        var days = Math.ceil(timeDifference / (24 * 60 * 60 * 1000)); // Zaokrouhlit nahoru
+        days = Math.max(0, days); // Nastavit minimální hodnotu na 0
+        var remainingText = "Zbýv";
         if (days === 1)
         {
-          remainingText += "1 den";
+          remainingText += "á 1 den";
         }
-        if (days > 1 && days <= 4)
+        else if (days > 1 && days < 5)
         {
-          remainingText += days + " dny";
+          remainingText += "ají " + days + " dny";
         }
         else
         {
-          remainingText += days + " dnů";
+          remainingText += "á " + days + " dnů";
         }
         if (days === 0)
         {
@@ -49,7 +50,6 @@ document.addEventListener('DOMContentLoaded', function()
       }
       else
       {
-        countdownElement.innerHTML = "Vybraný termín již uplynul.";
         container.remove(); // Smazat kontejner, když čas vyprší
       }
     }, 1000);
@@ -63,7 +63,6 @@ document.addEventListener('DOMContentLoaded', function()
     return day + '. ' + month + '. ' + year;
   }
 });
-
 
 function showInfo(element)
 {
@@ -87,8 +86,8 @@ document.addEventListener("DOMContentLoaded", function ()
 {
   const snowflakesContainer = document.getElementById("snowflakes-container");
   const currentDate = new Date();
-  const startDate = new Date(currentDate.getFullYear(), 11, 10);    // datum se indexuje od 0 po 11, takže 0 = leden a 11 = prosinec
-  const endDate = new Date(currentDate.getFullYear(), 0, 1);    // datum se indexuje od 0 po 11, takže 0 = leden a 11 = prosinec
+  const startDate = new Date(currentDate.getFullYear(), 0, 31);    // datum se indexuje od 0 po 11, takže 0 = leden a 11 = prosinec
+  const endDate = new Date(currentDate.getFullYear(), 1, 2);    // datum se indexuje od 0 po 11, takže 0 = leden a 11 = prosinec
 
   if (currentDate >= startDate && currentDate < endDate)
   {
