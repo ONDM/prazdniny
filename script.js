@@ -70,14 +70,93 @@ function showInfo(element)
   var infoDate = element.getAttribute('data-target-date');
   var infoContent = element.getAttribute('data-info').replace(/\\n/g, '\n');
 
+  // Aktualizace názvu a začátku události v kalendáři
+  var calendarTitle = infoTitle || 'Název Události';
+  var calendarStartDate = infoDate || new Date();
   document.getElementById('info-title').innerText = infoTitle;
   document.getElementById('info-content').innerText = infoContent;
+
+  // Odstranění existujícího tlačítka (duplikování)
+  var existingButton = document.getElementById('calbut');
+  if (existingButton)
+  {
+    existingButton.remove();
+  }
+  // Vytvoření nového tlačítka pro kalendář
+  var addToCalendarButton = document.createElement('button');
+  addToCalendarButton.innerText = '📅';
+  addToCalendarButton.title = 'Přidat do google kalendáře \n!Konečné datum události a upozornění musí být nastaveno manuálně!';
+  addToCalendarButton.addEventListener('click', function()
+  {
+    addToCalendar(calendarTitle, calendarStartDate);
+  });
+
+  addToCalendarButton.id = 'calbut';
+
+  // Přidání nového tlačítka do 'info-overlay'
+  var infoOverlay = document.getElementById('info-overlay');
+  infoOverlay.insertBefore(addToCalendarButton, infoOverlay.firstChild);
+
+  // Zobrazení 'info-overlay'
   document.getElementById('info-overlay').style.display = 'flex';
 }
 
 function hideInfo()
 {
   document.getElementById('info-overlay').style.display = 'none';
+}
+
+
+function addToCalendar(title, startDate)
+{
+  var startDateTime = new Date(startDate);
+
+  // Získání aktuálního datumu
+  var currentDate = new Date();
+
+  // Nastavení konce události na aktuální datum
+  var endDateTime = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate(), 23, 59, 59);
+
+  // Vytvořit URL pro otevření kalendáře s předvyplněnými informacemi o události
+  var calendarURL = 'https://www.google.com/calendar/render?action=TEMPLATE' +
+    '&text=' + encodeURIComponent(title) +
+    '&dates=' + encodeURIComponent(formatGoogleCalendarDate(startDateTime, true)) +
+    '/' + encodeURIComponent(formatGoogleCalendarDate(endDateTime, false)) +
+    '&details=' + encodeURIComponent('') +
+    '&remind=0';
+
+  // Otevřít nové okno pro vytvoření události v kalendáři
+  var googleCalendarWindow = window.open(calendarURL, '_blank');
+
+  // Přidat event listener pro detekci, kdy se okno zavře
+  if (googleCalendarWindow)
+  {
+    googleCalendarWindow.addEventListener('beforeunload', function()
+    {
+      console.log('Google Kalendář byl zavřen.');
+    });
+  }
+}
+
+function formatGoogleCalendarDate(date, isStart)
+{
+  var year = date.getFullYear();
+  var month = padZero(date.getMonth() + 1);
+  var day = padZero(date.getDate());
+  var hours = isStart ? '00' : '23';
+  var minutes = isStart ? '00' : '59';
+
+  // Ofset pro střední evropský čas (CET nebo CEST)
+  var offsetHours = isStart ? 1 : 2;
+  var offsetSign = '+';
+  var offsetHoursFormatted = padZero(offsetHours);
+
+  return year + month + day + 'T' + hours + minutes + '00H' + offsetSign + offsetHoursFormatted + '00';
+}
+
+function padZero(number)
+{
+  return number < 10 ? '0' + number : number;
 }
 
 
