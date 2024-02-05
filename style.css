@@ -1,6 +1,6 @@
 body
 {
-  font-family: 'font1', Arial, sans-serif;
+  font-family: Arial, sans-serif;
   text-align: center;
   margin: 50px;
   background: radial-gradient(circle at center, #282829, #0a0a0a);
@@ -11,7 +11,6 @@ body
 
 .date-container
 {
-  font-family: 'font1', Arial, sans-serif;
   padding: 20px;
   cursor: help;
   text-align: left;
@@ -58,8 +57,8 @@ body
 
 .targetDate
 {
-  font-family: 'font1', Arial, sans-serif;
   font-size: 18px;
+  font-family: 'font', Arial, sans-serif;
   margin-bottom: 10px;
   font-weight: bold;
   color: #ece9e9;
@@ -69,8 +68,8 @@ body
 
 .countdown
 {
-  font-family: 'font1', Arial, sans-serif;
   font-size: 15px;
+  font-family: 'font', Arial, sans-serif;
   font-weight: normal;
   margin-top: 20px;
   color: #c2c1c1;
@@ -80,17 +79,18 @@ body
 
 #nadpis
 {
-  font-family: 'font1', Arial, sans-serif;
   font-size: 30px;
+  font-family: 'font', Arial, sans-serif;
   color: #b1afaf;
+  border-radius: 40px;
   transform: translateY(50px);
   margin: 0px auto;
   margin-bottom: 35px;
 }
 
+
 #ond
 {
-  font-family: 'font1', Arial, sans-serif;
   color: #6b6b6b;
   margin: 0px auto;
   transform: translateY(40px);
@@ -99,14 +99,25 @@ body
 @font-face
 {
   font-family: 'font';
-  src: url('/prazdniny/font/font1.woff2') format('woff2');
+  src: url('font1.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
+#calbut
+{
+  z-index: 999;
+  position: absolute;
+  transform: translate(130px, -70px);
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
 #info-overlay
 {
-  font-family: 'font1', Arial, sans-serif;
+  font-family: 'font', Arial, sans-serif;
   display: none;
   position: fixed;
   top: 0;
@@ -121,7 +132,7 @@ body
 
 #info-box
 {
-  font-family: 'font1', Arial, sans-serif;
+  font-family: 'font', Arial, sans-serif;
   background: rgba(0, 0, 0, 0.8);
   padding: 20px;
   height: 150px;
@@ -130,11 +141,12 @@ body
   border: 2px solid transparent;
   border-radius: 30px;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+  text-align: center;
+  position: relative;
 }
 
 #info-title
 {
-  font-family: 'font1', Arial, sans-serif;
   font-size: 20px;
   text-align: center;
   transform: translateY(20px);
@@ -142,7 +154,6 @@ body
 
 #info-content
 {
-  font-family: 'font1', Arial, sans-serif;
   font-size: 16px;
   text-align: center;
   transform: translateY(40px);
@@ -191,14 +202,12 @@ body
 {
   .date-container
   {
-    font-family: 'font1', Arial, sans-serif;
     width: 85%;
     transform: translateY(125px);
   }
 
   #nadpis
   {
-    font-family: 'font1', Arial, sans-serif;
     font-size: 25px;
     transform: translateY(30px);
     margin-bottom: -60px;
@@ -206,7 +215,6 @@ body
 
   #ond
   {
-    font-family: 'font1', Arial, sans-serif;
     color: #6b6b6b;
     margin: 0px auto;
     transform: translateY(25px);
