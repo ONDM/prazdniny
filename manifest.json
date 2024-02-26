@@ -1,14 +1,14 @@
 {
-  "name": "Prázdniny",
-  "short_name": "Prázdniny",
-  "description": "Prázdniny",
+  "name": "Prazdniny",
+  "short_name": "Prazdniny",
+  "description": "Prazdniny",
   "start_url": "/prazdniny/",
   "display": "standalone",
   "background_color": "#0E0E0D",
   "theme_color": "#3B3B3A",
   "icons": [
     {
-      "src": "/prazdniny/favicon.png",
+      "src": "/prazdniny/favicon.jpg",
       "sizes": "600x600",
       "type": "image/jpg"
     }
