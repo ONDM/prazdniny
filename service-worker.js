@@ -6,6 +6,7 @@ const filesToCache = [
   '/prazdniny/script.js',
   '/prazdniny/favicon.png',
   '/prazdniny/font1.woff2'
+  '/prazdniny/manifest.json'
 ];
 
 self.addEventListener('install', event => {
