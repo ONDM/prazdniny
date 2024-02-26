@@ -1,11 +1,11 @@
 const cacheName = 'prazdniny-v1';
 const filesToCache = [
   '/prazdniny/',
-  '/prazdniny/manifest.json',
+  '/prazdniny/index.html',
   '/prazdniny/style.css',
   '/prazdniny/script.js',
   '/prazdniny/favicon.png',
-  '/prazdniny/font/font1.woff2',
+  '/prazdniny/font1.woff2'
 ];
 
 self.addEventListener('install', event => {
