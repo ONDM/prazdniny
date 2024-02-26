@@ -5,7 +5,7 @@ const filesToCache = [
   '/prazdniny/style.css',
   '/prazdniny/script.js',
   '/prazdniny/favicon.png',
-  '/prazdniny/font1.woff2'
+  '/prazdniny/font1.woff2',
   '/prazdniny/manifest.json'
 ];
 
