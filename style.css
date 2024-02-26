@@ -3,10 +3,46 @@ body
   font-family: Arial, sans-serif;
   text-align: center;
   margin: 50px;
-  background: radial-gradient(circle at center, #282829, #0a0a0a);
+  background: #141414;
   overflow: hidden;
   /*height: 150vh;
   overflow-y: scroll;*/
+}
+
+.gradient
+{
+  --size: 300px;
+  --speed: 20s;
+  --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+  width: var(--size);
+  height: var(--size);
+  filter: blur(calc(var(--size) / 5));
+  background-image: linear-gradient(hsl(0, 88%, 32%), hsl(233, 95%, 24%));
+  animation: rotate var(--speed) var(--easing) alternate infinite;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  z-index: -1;
+  position: absolute;
+
+}
+
+#gradient-container
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-150px, -125px);
+}
+
+@keyframes rotate
+{
+  0%
+  {
+    transform: rotate(0deg);
+  }
+  100%
+  {
+    transform: rotate(360deg);
+  }
 }
 
 .date-container
