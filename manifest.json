@@ -9,8 +9,8 @@
   "icons": [
     {
       "src": "/prazdniny/favicon.png",
-      "sizes": "4500x4500",
-      "type": "image/png"
+      "sizes": "600x600",
+      "type": "image/jpg"
     }
   ]
 }
