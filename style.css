@@ -252,3 +252,17 @@ body
     opacity: 0.1;
   }
 }
+
+/* IPHONE 15 */
+@media only screen and (max-width: 375px)
+{
+   #time-image
+  {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    width: 80px;
+    height: 80px;
+    opacity: 0.1;
+  }
+}
