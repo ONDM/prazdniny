@@ -254,7 +254,7 @@ body
 }
 
 /* IPHONE 15 */
-@media only screen and (width: 393px) and (height: 852px) and (-webkit-device-pixel-ratio: 3)
+@media only screen and (width: 393px)
 {
   #time-image
   {
