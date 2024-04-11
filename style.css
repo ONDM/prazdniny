@@ -11,7 +11,7 @@ body
 
 #time-image
 {
-  position: absolute;
+  position: fixed;
   top: -10px;
   left: 10px;
   width: 80px;
@@ -240,5 +240,15 @@ body
     color: #6b6b6b;
     margin: 0px auto;
     transform: translateY(25px);
+  }
+
+  #time-image
+  {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    width: 80px;
+    height: 80px;
+    opacity: 0.1;
   }
 }
