@@ -5,8 +5,8 @@ body
   margin: 50px;
   background: #141414;
   overflow: hidden;
-  /*height: 150vh;
-  overflow-y: scroll;*/
+  height: 150vh;
+  overflow-y: scroll;
 }
 
 .gradient
