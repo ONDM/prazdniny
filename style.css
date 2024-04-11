@@ -9,6 +9,16 @@ body
   overflow-y: scroll;
 }
 
+#time-image
+{
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  width: 80px;
+  height: 80px;
+  opacity: 0.1;
+}
+
 .gradient
 {
   --size: 300px;
