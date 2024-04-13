@@ -73,7 +73,7 @@ body
   border-radius: 40px;
   width: 200px;
   margin-bottom: 30px;
-  transform: translateY(80px);
+  transform: translateY(70px);
   box-shadow: 0 0 15px rgba(163, 163, 163, 0.8);
 }
 
@@ -105,7 +105,7 @@ body
   font-family: 'font', Arial, sans-serif;
   color: #b1afaf;
   border-radius: 40px;
-  transform: translateY(50px);
+  transform: translateY(30px);
   margin: 0px auto;
   margin-bottom: 35px;
 }
