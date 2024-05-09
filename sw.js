@@ -4,7 +4,7 @@ const assets = [
   '/prazdniny/',
   '/prazdniny/style.css',
   '/prazdniny/script.js',
-  '/prazdniny/favicon.jpg',
+  '/prazdniny/favicon.png',
   '/prazdniny/font/font1.woff2',
   '/prazdniny/manifest.json',
   '/prazdniny/logo.png',
