@@ -159,6 +159,18 @@ function padZero(number)
   return number < 10 ? '0' + number : number;
 }
 
+// SW
+if ('serviceWorker' in navigator)
+{
+  navigator.serviceWorker.register('sw.js').then(() =>
+    {
+      console.log('Service Worker úspěšně spuštěn. Offline režim aktivován.');
+    }).catch(error =>
+    {
+      console.log('Registrace Service Workera selhala:', error);
+    });
+}
+
 
 // PADÁNÍ VLOČEK
 document.addEventListener("DOMContentLoaded", function ()
