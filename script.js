@@ -28,9 +28,9 @@ document.addEventListener('DOMContentLoaded', function()
     const ulozenyOkres = localStorage.getItem('vybranyOkres');
     
     if (ulozenyOkres && kontejner) {
-      kontejner.style.display = 'flex'; // Zobrazí text i s outline tlačítkem
+      kontejner.style.display = 'flex'; 
     } else if (kontejner) {
-      kontejner.style.display = 'none';  // Skryje ho při prvotním výběru
+      kontejner.style.display = 'none';  
     }
   }
 
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function()
     {
       localStorage.setItem('vybranyOkres', okresSelect.value);
       if (okresOverlay) okresOverlay.style.display = 'none';
-      aktualizujViditelnostTlacitkaZmeny(); // 🔥 Zobrazí rohové tlačítko po uložení
+      aktualizujViditelnostTlacitkaZmeny(); 
       nacistPrazdniny(); 
     };
   }
@@ -89,6 +89,7 @@ document.addEventListener('DOMContentLoaded', function()
   // Kontrola, zda už má uživatel vybraný okres v paměti prohlížeče
   let ulozenyOkres = localStorage.getItem('vybranyOkres');
 
+  // Spustíme kontrolu viditelnosti hned na začátku
   aktualizujViditelnostTlacitkaZmeny();
 
   if (!ulozenyOkres && okresOverlay)
@@ -275,7 +276,7 @@ document.addEventListener('DOMContentLoaded', function()
         clearInterval(interval);
       }
     }
-    幕 CheckTime();
+    checkTime();
     var interval = setInterval(checkTime, 1000);
   }
 
