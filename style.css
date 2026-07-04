@@ -27,12 +27,11 @@ body
   width: var(--size);
   height: var(--size);
   filter: blur(calc(var(--size) / 5));
-  background-image: linear-gradient(hsl(0, 88%, 32%), hsl(233, 95%, 24%));
+  background-image: linear-gradient(hsl(124, 37%, 22%), hsl(120, 3%, 35%));
   animation: rotate var(--speed) var(--easing) alternate infinite;
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   z-index: -1;
   position: fixed;
-
 }
 
 #gradient-container
@@ -55,14 +54,6 @@ body
   }
 }
 
-#rok
-{
-  font-family: 'font', Arial, sans-serif;
-  transform: translate(-0px, 56px);
-  font-size: 20px;
-  color: #b1afaf
-}
-
 .date-container
 {
   padding: 20px;
@@ -75,6 +66,27 @@ body
   margin-bottom: 30px;
   transform: translateY(70px);
   box-shadow: 0 0 15px rgba(163, 163, 163, 0.8);
+  transition: all 0.3s ease;
+}
+
+/* Styl pro právě probíhající prázdniny*/
+.date-container.active-holiday
+{
+  border: 2px solid #3c9f71 !important;
+  box-shadow: 0 0 20px rgb(41, 106, 49, 0.7);
+  animation: pulseBlue 2s infinite alternate;
+}
+
+@keyframes pulseBlue
+{
+  0%
+  {
+    box-shadow: 0 0 10px rgb(43, 130, 90, 0.7);
+  }
+  100%
+  {
+    box-shadow: 0 0 25px rgba(43, 130, 73, 1);
+  }
 }
 
 .targetDate
@@ -96,7 +108,7 @@ body
   margin-top: 20px;
   color: #c2c1c1;
   text-align: center;
-  line-height: 0.5;
+  line-height: 1;
 }
 
 #nadpis
@@ -110,6 +122,32 @@ body
   margin-bottom: 35px;
 }
 
+.okres-zmena-kontejner
+{
+  text-align: center;
+  margin-top: -5px;
+  margin-bottom: 15px;
+  font-size: 13px;
+  color: #aaa;
+  font-family: Arial, sans-serif;
+}
+
+#hlavni-zmenit-okres-btn
+{
+  background: #333;
+  border: 1px solid #555;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 8px;
+  font-size: 12px;
+}
+
+#hlavni-zmenit-okres-btn:hover
+{
+  background: #444;
+}
 
 #ond
 {
@@ -181,45 +219,122 @@ body
   transform: translateY(40px);
 }
 
+#okres-overlay
+{
+  display: none; 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  background: rgba(0, 0, 0, 0.7); 
+  z-index: 10000;
+  justify-content: center; 
+  align-items: center;
+}
 
-/* PADÁNÍ VLOČEK */
+#okres-box
+{
+  font-family: 'font', Arial, sans-serif; 
+  background: rgba(0, 0, 0, 0.85); 
+  padding: 25px 20px; 
+  height: 190px; 
+  width: 270px; 
+  color: white; 
+  border: 2px solid transparent; 
+  border-radius: 30px; 
+  box-shadow: 0 0 15px rgba(163, 163, 163, 0.8); 
+  text-align: center; 
+  box-sizing: border-box;
+  position: relative;
+}
+
+#okres-box h3
+{
+  font-size: 20px; 
+  margin: 0; 
+  color: white; 
+  font-weight: normal; 
+  width: 100%;
+  position: absolute;
+  top: 25px;
+  left: 0;
+}
+
+#okres-select
+{
+  width: 90%; 
+  padding: 8px; 
+  border-radius: 12px; 
+  background: rgba(20, 20, 20, 0.9); 
+  color: #ece9e9; 
+  border: 1px solid #555; 
+  font-size: 15px; 
+  outline: none; 
+  cursor: pointer; 
+  font-family: 'font', Arial, sans-serif;
+  position: absolute;
+  top: 75px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  text-align-last: center;
+}
+
+#okres-submit
+{
+  background: #444; 
+  border: none; 
+  padding: 8px 20px; 
+  color: white; 
+  font-weight: normal; 
+  border-radius: 12px; 
+  cursor: pointer; 
+  font-size: 13px; 
+  font-family: 'font', Arial, sans-serif; 
+  transition: background 0.2s; 
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#okres-submit:hover
+{
+  background: #555;
+}
+
+
 .snowflakes
 {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   pointer-events: none;
+  z-index: 9999;
 }
 
 .snowflake
 {
   position: absolute;
   color: #fff;
-  font-size: 20px; /* Velikost vločky */
-  animation: fall linear infinite;
+  font-size: 20px; 
 }
 
 @keyframes fall
 {
   0%
   {
-    transform: translateY(-10vh);
+    transform: translateY(-5vh);
   }
   100%
   {
-    transform: translateY(110vh);
-    opacity: 0;
+    transform: translateY(105vh);
   }
 }
 
-
-
-
-
-/* OBSAH PRO OSTATNÍ ZAŘÍZENÍ */
-/* IPHONE SE 2020 */
 @media only screen and (max-width: 375px)
 {
   .date-container
@@ -251,10 +366,19 @@ body
     height: 80px;
     opacity: 0.1;
   }
+
+  #okres-box
+  {
+    width: 270px !important;
+    max-width: 90vw;
+  }
+  #okres-select
+  {
+    width: 85% !important;
+  }
 }
 
-/* IPHONE 15 */
-@media only screen and (width: 393px)
+@media only screen and (max-width: 414px)
 {
   #time-image
   {
@@ -264,5 +388,15 @@ body
     width: 80px;
     height: 80px;
     opacity: 0.1;
+  }
+
+  #okres-box
+  {
+    width: 270px !important;
+    max-width: 90vw;
+  }
+  #okres-select
+  {
+    width: 85% !important;
   }
 }
