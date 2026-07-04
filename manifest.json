@@ -18,5 +18,31 @@
       "sizes": "512x512",
       "type": "image/png"
     }
+  ],
+  "screenshots": [
+    {
+      "src": "/prazdniny/screen1.png",
+      "sizes": "1179x2445",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/prazdniny/screen2.png",
+      "sizes": "1179x2445",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/prazdniny/screen3.png",
+      "sizes": "1179x2445",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/prazdniny/screen4.png",
+      "sizes": "1179x2445",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
   ]
 }
