@@ -1,15 +1,18 @@
 // SEZNAM VŠECH OKRESŮ V ČR PRO VÝBĚR
 const VSECHNY_OKRESY = [
-  "Blansko", "Brno-město", "Brno-venkov", "Břeclav", "Hodonín", "Vyškov", "Znojmo",
-  "Praha 1", "Praha 2", "Praha 3", "Praha 4", "Praha 5", "Praha 6", "Praha 7", "Praha 8", "Praha 9", "Praha 10",
-  "Praha-východ", "Praha-západ", "Benešov", "Beroun", "Kladno", "Kolín", "Kutná Hora", "Mělník", "Mladá Boleslav", "Nymburk", "Příbram", "Rakovník",
-  "České Budějovice", "Český Krumlov", "Jindřichův Hradec", "Písek", "Prachatice", "Strakonice", "Tábor",
-  "Cheb", "Karlovy Vary", "Sokolov", "Děčín", "Chomutov", "Litoměřice", "Louny", "Most", "Teplice", "Ústí nad Labem",
-  "Česká Lípa", "Jablonec nad Nisou", "Liberec", "Semily", "Hradec Králové", "Jičín", "Náchod", "Rychnov nad Kněžnou", "Trutnov",
-  "Chrudim", "Pardubice", "Svitavy", "Ústí nad Orlicí", "Havlíčkův Brod", "Jihlava", "Pelhřimov", "Třebíč", "Žďár nad Sázavou",
-  "Kroměříž", "Uherské Hradiště", "Vsetín", "Zlín", "Jeseník", "Olomouc", "Přerov", "Šumperk", "Prostějov",
-  "Bruntál", "Frýdek-Místek", "Karviná", "Nový Jičín", "Opava", "Ostrava-město",
-  "Domažlice", "Klatovy", "Plzeň-jih", "Plzeň-město", "Plzeň-sever", "Rokycany", "Tachov"
+  "Benešov", "Beroun", "Blansko", "Brno-město", "Brno-venkov", "Bruntál", "Břeclav", 
+  "Cheb", "Chomutov", "Chrudim", "Česká Lípa", "České Budějovice", "Český Krumlov", 
+  "Děčín", "Domažlice", "Frýdek-Místek", "Havlíčkův Brod", "Hodonín", "Hradec Králové", 
+  "Jablonec nad Nisou", "Jeseník", "Jičín", "Jihlava", "Jindřichův Hradec", "Karlovy Vary", 
+  "Karviná", "Kladno", "Klatovy", "Kolín", "Kroměříž", "Kutná Hora", "Liberec", 
+  "Litoměřice", "Louny", "Most", "Mělník", "Mladá Boleslav", "Náchod", "Nový Jičín", 
+  "Nymburk", "Olomouc", "Opava", "Ostrava-město", "Pardubice", "Pelhřimov", "Písek", 
+  "Plzeň-jih", "Plzeň-město", "Plzeň-sever", "Praha 1", "Praha 10", "Praha 2", "Praha 3", 
+  "Praha 4", "Praha 5", "Praha 6", "Praha 7", "Praha 8", "Praha 9", "Praha-východ", 
+  "Praha-západ", "Prachatice", "Prostějov", "Přerov", "Příbram", "Rakovník", "Rokycany", 
+  "Rychnov nad Kněžnou", "Semily", "Sokolov", "Strakonice", "Svitavy", "Šumperk", "Tábor", 
+  "Tachov", "Teplice", "Trutnov", "Třebíč", "Uherské Hradiště", "Ústí nad Labem", 
+  "Ústí nad Orlicí", "Vsetín", "Vyškov", "Zlín", "Znojmo", "Žďár nad Sázavou"
 ].sort();
 
 document.addEventListener('DOMContentLoaded', function()
@@ -19,11 +22,24 @@ document.addEventListener('DOMContentLoaded', function()
   const okresSubmit = document.getElementById('okres-submit');
   const hlavniZmenitBtn = document.getElementById('hlavni-zmenit-okres-btn');
 
-  // Okresy abecedně
+  // Pomocná funkce pro zobrazení/skrytí rohového kontejneru se změnou okresu
+  function aktualizujViditelnostTlacitkaZmeny() {
+    const kontejner = document.querySelector(".okres-zmena-kontejner");
+    const ulozenyOkres = localStorage.getItem('vybranyOkres');
+    
+    if (ulozenyOkres && kontejner) {
+      kontejner.style.display = 'flex'; // Zobrazí text i s outline tlačítkem
+    } else if (kontejner) {
+      kontejner.style.display = 'none';  // Skryje ho při prvotním výběru
+    }
+  }
+
+  // Okresy abecedně + zafixování velikosti pro mobilní simulátory
   if (okresSelect)
   {
+    okresSelect.size = 1; 
     VSECHNY_OKRESY.forEach(okres =>
-      {
+    {
       let opt = document.createElement('option');
       opt.value = okres;
       opt.innerHTML = okres;
@@ -38,6 +54,7 @@ document.addEventListener('DOMContentLoaded', function()
     {
       localStorage.setItem('vybranyOkres', okresSelect.value);
       if (okresOverlay) okresOverlay.style.display = 'none';
+      aktualizujViditelnostTlacitkaZmeny(); // 🔥 Zobrazí rohové tlačítko po uložení
       nacistPrazdniny(); 
     };
   }
@@ -49,8 +66,6 @@ document.addEventListener('DOMContentLoaded', function()
     {
       if (event.target === okresOverlay)
       {
-        // Pokud uživatel už má v paměti nějaký okres uložený (např. mění okres z hlavní stránky), 
-        // dovolí se mu okno zavřít. Pokud je tu poprvé (Local Storage je prázdný), ignoruje se.
         if (localStorage.getItem('vybranyOkres'))
         {
           okresOverlay.style.display = 'none';
@@ -73,6 +88,8 @@ document.addEventListener('DOMContentLoaded', function()
 
   // Kontrola, zda už má uživatel vybraný okres v paměti prohlížeče
   let ulozenyOkres = localStorage.getItem('vybranyOkres');
+
+  aktualizujViditelnostTlacitkaZmeny();
 
   if (!ulozenyOkres && okresOverlay)
   {
@@ -258,7 +275,7 @@ document.addEventListener('DOMContentLoaded', function()
         clearInterval(interval);
       }
     }
-    checkTime();
+    幕 CheckTime();
     var interval = setInterval(checkTime, 1000);
   }
 
