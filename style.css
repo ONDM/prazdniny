@@ -139,19 +139,23 @@ body
 
 #hlavni-zmenit-okres-btn
 {
-  background: #333;
-  border: 1px solid #555;
-  color: white;
-  padding: 4px 10px;
-  border-radius: 6px;
+  background: transparent;
+  border: 2px solid #3c9f71;
+  color: #ece9e9;
+  padding: 5px 12px;
+  border-radius: 15px;
   cursor: pointer;
   font-size: 12px;
-  transition: background 0.2s;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 0 10px rgba(43, 130, 90, 0.5);
+  transition: all 0.3s ease;
 }
+
 
 #hlavni-zmenit-okres-btn:hover
 {
-  background: #444;
+  box-shadow: 0 0 18px rgba(43, 130, 73, 0.9);
+  transform: scale(1.03);
 }
 
 #ond
