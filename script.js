@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function()
     const aktualniOkresText = document.getElementById('aktualni-okres-text');
     if (aktualniOkresText)
     {
-      aktualniOkresText.innerText = `Jarní prázdniny zobrazeny pro okres: ${mujOkres}`;
+      aktualniOkresText.innerText = `Jarní prázdniny pro okres: ${mujOkres}`;
     }
 
     const listContainer = document.getElementById('prazdniny-list');
