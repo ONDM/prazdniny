@@ -367,7 +367,7 @@ document.addEventListener("DOMContentLoaded", function ()
 
   const currentDate = new Date();
   const startDate = new Date(currentDate.getFullYear(), 11, 10);
-  const endDate = new Date(currentDate.getFullYear() + 1, 0, 1);
+  const endDate = new Date(currentDate.getFullYear() + 1, 0, 5);
 
   if (currentDate >= startDate && currentDate < endDate)
   {
