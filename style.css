@@ -66,10 +66,9 @@ body
   margin-bottom: 30px;
   transform: translateY(70px);
   box-shadow: 0 0 15px rgba(163, 163, 163, 0.8);
-  transition: all 0.3s ease;
+  transition: all 0.3s ease; /* Zajišťuje plynulé blikání/přechod záře */
 }
 
-/* Styl pro právě probíhající prázdniny*/
 .date-container.active-holiday
 {
   border: 2px solid #3c9f71 !important;
@@ -124,12 +123,18 @@ body
 
 .okres-zmena-kontejner
 {
-  text-align: center;
-  margin-top: -5px;
-  margin-bottom: 15px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-align: right;
   font-size: 13px;
   color: #aaa;
   font-family: Arial, sans-serif;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
 }
 
 #hlavni-zmenit-okres-btn
@@ -137,11 +142,11 @@ body
   background: #333;
   border: 1px solid #555;
   color: white;
-  padding: 3px 8px;
+  padding: 4px 10px;
   border-radius: 6px;
   cursor: pointer;
-  margin-left: 8px;
   font-size: 12px;
+  transition: background 0.2s;
 }
 
 #hlavni-zmenit-okres-btn:hover
@@ -304,7 +309,6 @@ body
   background: #555;
 }
 
-
 .snowflakes
 {
   position: fixed;
@@ -335,6 +339,8 @@ body
   }
 }
 
+/* OBSAH PRO OSTATNÍ ZAŘÍZENÍ */
+/* IPHONE SE 2020 */
 @media only screen and (max-width: 375px)
 {
   .date-container
@@ -378,6 +384,7 @@ body
   }
 }
 
+/* IPHONE 15 / XR A VYŠŠÍ MOBILY */
 @media only screen and (max-width: 414px)
 {
   #time-image
