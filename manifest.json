@@ -1,7 +1,7 @@
 {
-  "name": "OND - prazdniny",
-  "short_name": "Prazdniny",
-  "description": "Offline prazdniny",
+  "name": "OND - Prázdniny",
+  "short_name": "Prázdniny",
+  "description": "Jednoduchý odpočet a přehled školních prázdnin v ČR podle okresů",
   "start_url": "/prazdniny/",
 "display": "standalone",
   "background_color": "#141414",
