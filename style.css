@@ -66,17 +66,17 @@ body
   margin-bottom: 30px;
   transform: translateY(70px);
   box-shadow: 0 0 15px rgba(163, 163, 163, 0.8);
-  transition: all 0.3s ease; /* Zajišťuje plynulé blikání/přechod záře */
+  transition: all 0.3s ease;
 }
 
 .date-container.active-holiday
 {
   border: 2px solid #3c9f71 !important;
   box-shadow: 0 0 20px rgb(41, 106, 49, 0.7);
-  animation: pulseBlue 2s infinite alternate;
+  animation: pulseGreen 2s infinite alternate;
 }
 
-@keyframes pulseBlue
+@keyframes pulseGreen
 {
   0%
   {
@@ -140,22 +140,21 @@ body
 #hlavni-zmenit-okres-btn
 {
   background: transparent;
-  border: 2px solid #3c9f71;
+  border: 1px solid rgba(163, 163, 163, 0.6);
   color: #ece9e9;
   padding: 5px 12px;
   border-radius: 15px;
   cursor: pointer;
   font-size: 12px;
   font-family: Arial, sans-serif;
-  box-shadow: 0 0 10px rgba(43, 130, 90, 0.5);
+  box-shadow: 0 0 12px rgba(163, 163, 163, 0.4);
   transition: all 0.3s ease;
 }
 
-
 #hlavni-zmenit-okres-btn:hover
 {
-  box-shadow: 0 0 18px rgba(43, 130, 73, 0.9);
-  transform: scale(1.03);
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 18px rgba(163, 163, 163, 0.8);
 }
 
 #ond
