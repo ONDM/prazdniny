@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nadcházející prázdniny</title>
+  <title>Prázdniny</title>
   <link rel="stylesheet" href="/prazdniny/style.css">
   <script src="/prazdniny/script.js"></script>
   <script src="/prazdniny/sw.js"></script>
@@ -13,49 +13,41 @@
 </head>
 
 <body>
-<img src="/prazdniny/logo.png" alt="Image" id="time-image">
-<div id="time-display" class="time-display"></div>
-</div>
+  <img src="/prazniny/logo.png" alt="Image" id="time-image">
+  <div id="time-display" class="time-display"></div>
+
   <div id="gradient-container">
     <div class="gradient"></div>
   </div>
   
-  <!-- NADPIS -->
-  <div id="nadpis">Nadcházející prázdniny</div>
-  <!-- PRVNÍ DATUM -->
-  <!--<div id="rok">⇓ 2024/2025 ⇓</div>*/ -->
+  <div id="nadpis">Prázdniny</div>
+  <div class="okres-zmena-kontejner">
+    <span id="aktualni-okres-text"></span>
+    <button id="hlavni-zmenit-okres-btn">Změnít</button>
+  </div>
   
-  <!-- PRVNÍ DATUM -->
-  <div class="date-container" data-target-date="2025-01-31" data-info-title="Pololetní prázdniny" data-info="31. 1. 2025\n pátek" onclick="showInfo(this)">
-    <div class="targetDate">31.1.2025</div>
-    <div class="countdown"></div>
-  </div>
-  <!-- DRUHÉ DATUM -->
-  <div class="date-container" data-target-date="2025-02-10" data-info-title="Jarní prázdniny" data-info="10. 2. 2025 - 16. 2. 2025\n pondělí - neděle" onclick="showInfo(this)">
-    <div class="targetDate">10.2.2025</div>
-    <div class="countdown"></div>
-  </div>
-  <!-- TŘETÍ DATUM -->
-  <div class="date-container" data-target-date="2025-04-17" data-info-title="Velikonoční prázdniny" data-info="17. 4. 2025 - čtvrtek\n\n18. 4. (pá) a 21. 4. (po) je svátek" onclick="showInfo(this)">
-    <div class="targetDate">17.4.2025</div>
-    <div class="countdown"></div>
-  </div>
-  <!-- ČTVRTÉ DATUM -->
-  <div class="date-container" data-target-date="2025-06-28" data-info-title="Letní prázdniny" data-info="28. 6. 2025 - 31. 8. 2025\nčtvrtek - neděle" onclick="showInfo(this)">
-    <div class="targetDate">28.6.2025</div>
-    <div class="countdown"></div>
-  </div>
+  <div id="prazdniny-list"></div>
 
-  <!-- INFO BOX -->
-  <div id="info-overlay" onclick="hideInfo()">
+  <div id="info-overlay">
     <div id="info-box">
       <h2 id="info-title">Podrobnosti</h2>
-      <p id="info-date"></p>
       <p id="info-content"></p>
     </div>
   </div>
-  <div class="snowflakes" id="snowflakes-container"></div>
 
+  <div id="okres-overlay">
+    <div id="okres-box">
+      <h3>Vyber svůj okres</h3>
+      <select id="okres-select">
+        </select>
+      <button id="okres-submit">Uložit</button>
+    </div>
+  </div>
+
+    </div>
+  </div>
+
+  <div class="snowflakes" id="snowflakes-container"></div>
 </body>
 
 </html>
