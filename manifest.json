@@ -5,6 +5,7 @@
   "id": "/prazdniny/",
   "start_url": "/prazdniny/",
   "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#141414",
   "theme_color": "#000000",
   "icons": [
