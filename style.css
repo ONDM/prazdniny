@@ -16,7 +16,9 @@ body
   left: 10px;
   width: 80px;
   height: 80px;
-  opacity: 0.1;
+  pointer-events: none;
+  filter: brightness(0) invert(1);
+  opacity: 0.002 !important;
 }
 
 .gradient
