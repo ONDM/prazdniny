@@ -170,7 +170,7 @@ body
   pointer-events: none;
 }
 
-zmena-kontejner:hover
+#zmena-kontejner:hover
 {
   background-image: linear-gradient(rgba(30, 30, 30, 0.9), rgba(30, 30, 30, 0.9)), 
                     linear-gradient(to right, rgba(255, 255, 255, 0.9), #4cd195);
