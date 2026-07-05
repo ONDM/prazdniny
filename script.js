@@ -20,16 +20,15 @@ document.addEventListener('DOMContentLoaded', function()
   const okresOverlay = document.getElementById('okres-overlay');
   const okresSelect = document.getElementById('okres-select');
   const okresSubmit = document.getElementById('okres-submit');
-  const hlavniZmenitBtn = document.getElementById('hlavni-zmenit-okres-btn');
+  const okresKapsle = document.getElementById('okres-zmena-kapsle');
 
+  // Pomocná funkce pro zobrazení/skrytí rohového kontejneru se změnou okresu
   function aktualizujViditelnostTlacitkaZmeny() {
-    const kontejner = document.querySelector(".okres-zmena-kontejner");
     const ulozenyOkres = localStorage.getItem('vybranyOkres');
-    
-    if (ulozenyOkres && kontejner) {
-      kontejner.style.display = 'flex';
-    } else if (kontejner) {
-      kontejner.style.display = 'none'; 
+    if (ulozenyOkres && okresKapsle) {
+      okresKapsle.style.display = 'flex'; 
+    } else if (okresKapsle) {
+      okresKapsle.style.display = 'none';  
     }
   }
 
@@ -51,9 +50,11 @@ document.addEventListener('DOMContentLoaded', function()
   {
     okresSubmit.onclick = function()
     {
-      localStorage.setItem('vybranyOkres', okresSelect.value);
+      if (okresSelect) {
+        localStorage.setItem('vybranyOkres', okresSelect.value);
+      }
       if (okresOverlay) okresOverlay.style.display = 'none';
-      aktualizujViditelnostTlacitkaZmeny();
+      aktualizujViditelnostTlacitkaZmeny(); 
       nacistPrazdniny(); 
     };
   }
@@ -73,9 +74,10 @@ document.addEventListener('DOMContentLoaded', function()
     };
   }
 
-  if (hlavniZmenitBtn)
+  // Kliknutí na celou svítící kapsli (badge) otevře výběr okresu
+  if (okresKapsle)
   {
-    hlavniZmenitBtn.onclick = function()
+    okresKapsle.onclick = function()
     {
       if (okresSelect)
       {
@@ -88,7 +90,6 @@ document.addEventListener('DOMContentLoaded', function()
   // Kontrola, zda už má uživatel vybraný okres v paměti prohlížeče
   let ulozenyOkres = localStorage.getItem('vybranyOkres');
 
-  // Spustí se kontrola viditelnosti hned na začátku
   aktualizujViditelnostTlacitkaZmeny();
 
   if (!ulozenyOkres && okresOverlay)
@@ -106,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function()
     const aktualniOkresText = document.getElementById('aktualni-okres-text');
     if (aktualniOkresText)
     {
-      aktualniOkresText.innerText = `Jarní prázdniny pro okres: ${mujOkres}`;
+      aktualniOkresText.innerText = `${mujOkres} (Změnit)`;
     }
 
     const listContainer = document.getElementById('prazdniny-list');
@@ -137,9 +138,9 @@ document.addEventListener('DOMContentLoaded', function()
     fetch('/prazdniny/prazdniny-list.json')
       .then(response => response.json())
       .then(holidays =>
-        {
+      {
         holidays.sort((a, b) =>
-          {
+        {
           const dateA = new Date(a.date);
           const dateB = new Date(b.date);
           const endA = a.dateEnd ? new Date(a.dateEnd) : new Date(a.date);
@@ -162,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function()
         });
 
         holidays.forEach(holiday =>
-          {
+        {
           var startDate = new Date(holiday.date);
           var endDate = holiday.dateEnd ? new Date(holiday.dateEnd) : new Date(holiday.date);
 
@@ -215,9 +216,8 @@ document.addEventListener('DOMContentLoaded', function()
           var countdownElement = container.querySelector('.countdown');
           updateCountdown(startDate, endDate, countdownElement, container);
         });
-      }
-    )
-    .catch(error => console.error('Chyba při stahování prázdnin z JSON:', error));
+      })
+      .catch(error => console.error('Chyba při stahování prázdnin z JSON:', error));
   }
 
   window.resetPrazdniny = nacistPrazdniny;
@@ -275,7 +275,7 @@ document.addEventListener('DOMContentLoaded', function()
         clearInterval(interval);
       }
     }
-    幕 CheckTime();
+    checkTime();
     var interval = setInterval(checkTime, 1000);
   }
 
@@ -367,16 +367,13 @@ function formatGoogleCalendarDate(date)
 
 function padZero(number) { return number < 10 ? '0' + number : number; }
 
-// SW
 if ('serviceWorker' in navigator)
 {
-  navigator.serviceWorker.register('/prazdniny/sw.js').then(() =>
-    {
+  navigator.serviceWorker.register('/prazdniny/sw.js').then(() => {
     console.log('Service Worker úspěšně spuštěn. Offline režim aktivován.');
   }).catch(error => console.log('Registrace Service Workera selhala:', error));
 }
 
-// Vločky
 document.addEventListener("DOMContentLoaded", function ()
 {
   const snowflakesContainer = document.getElementById("snowflakes-container");
