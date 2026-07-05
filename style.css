@@ -159,15 +159,15 @@ body
 {
   background: transparent;
   border: none;
-  color: #3c9f71;
-  font-weight: bold;
+  color: #6a8d7b;
+  font-weight: normal;
   padding: 0;
   margin-left: 8px;
   font-size: 12px;
   font-family: Arial, sans-serif;
   cursor: pointer;
   box-shadow: none;
-  transition: color 0.2s, text-shadow 0.2s;
+  transition: color 0.2s;
   pointer-events: none;
 }
 
@@ -180,8 +180,7 @@ body
 
 .okres-zmena-kontejner:hover #hlavni-zmenit-okres-btn
 {
-  color: #4cd195;
-  text-shadow: 0 0 5px rgba(76, 209, 149, 0.5);
+  color: #8ebd9f;
 }
 
 #ond
