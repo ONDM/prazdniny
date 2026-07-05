@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function()
     const aktualniOkresText = document.getElementById('aktualni-okres-text');
     if (aktualniOkresText)
     {
-      aktualniOkresText.innerText = `${mujOkres} (Změnit)`;
+      aktualniOkresText.innerText = `${mujOkres}`;
     }
 
     const listContainer = document.getElementById('prazdniny-list');
