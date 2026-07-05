@@ -174,13 +174,8 @@ body
 .okres-zmena-kontejner:hover
 {
   background-image: linear-gradient(rgba(30, 30, 30, 0.9), rgba(30, 30, 30, 0.9)), 
-                    linear-gradient(to right, rgba(255, 255, 255, 0.9), #4cd195);
+                    linear-gradient(to right, rgba(255, 255, 255, 0.9) 70%, #4cd195 100%);
   box-shadow: -5px 0 18px rgba(163, 163, 163, 0.5), 5px 0 18px rgba(60, 159, 113, 0.6);
-}
-
-.okres-zmena-kontejner:hover #hlavni-zmenit-okres-btn
-{
-  color: #8ebd9f;
 }
 
 #ond
