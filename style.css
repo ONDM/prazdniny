@@ -126,37 +126,56 @@ body
 .okres-zmena-kontejner
 {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  text-align: right;
-  font-size: 13px;
-  color: #aaa;
-  font-family: Arial, sans-serif;
+  top: 25px;
+  right: 25px;
   z-index: 100;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(163, 163, 163, 0.5);
+  padding: 6px 14px;
+  border-radius: 20px; /* Pilulkový tvar */
+  box-shadow: 0 0 10px rgba(163, 163, 163, 0.3);
+  cursor: pointer;
+  
+  transition: all 0.3s ease;
+}
+
+#aktualni-okres-text
+{
+  font-size: 13px;
+  color: #ece9e9;
+  font-family: 'font', Arial, sans-serif;
+  font-weight: normal;
+  margin: 0;
+  pointer-events: none;
 }
 
 #hlavni-zmenit-okres-btn
 {
   background: transparent;
-  border: 1px solid rgba(163, 163, 163, 0.6);
-  color: #ece9e9;
-  padding: 5px 12px;
-  border-radius: 15px;
-  cursor: pointer;
+  border: none;
+  color: #b1afaf;
+  padding: 0;
+  margin-left: 8px;
   font-size: 12px;
   font-family: Arial, sans-serif;
-  box-shadow: 0 0 12px rgba(163, 163, 163, 0.4);
-  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: none;
+  transition: color 0.2s;
+  pointer-events: none;
 }
 
-#hlavni-zmenit-okres-btn:hover
+.okres-zmena-kontejner:hover
 {
   border-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 0 18px rgba(163, 163, 163, 0.8);
+  box-shadow: 0 0 18px rgba(163, 163, 163, 0.7);
+}
+.okres-zmena-kontejner:hover #hlavni-zmenit-okres-btn
+{
+  color: #fff;
 }
 
 #ond
@@ -387,6 +406,13 @@ body
   {
     width: 85% !important;
   }
+  
+  .okres-zmena-kontejner
+  {
+    top: 15px;
+    right: 15px;
+    padding: 4px 10px;
+  }
 }
 
 /* IPHONE 15 / XR A VYŠŠÍ MOBILY */
@@ -410,5 +436,12 @@ body
   #okres-select
   {
     width: 85% !important;
+  }
+  
+  .okres-zmena-kontejner
+  {
+    top: 15px;
+    right: 15px;
+    padding: 4px 10px;
   }
 }
