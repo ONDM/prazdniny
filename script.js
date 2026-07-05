@@ -22,15 +22,14 @@ document.addEventListener('DOMContentLoaded', function()
   const okresSubmit = document.getElementById('okres-submit');
   const hlavniZmenitBtn = document.getElementById('hlavni-zmenit-okres-btn');
 
-  // Pomocná funkce pro zobrazení/skrytí rohového kontejneru se změnou okresu
   function aktualizujViditelnostTlacitkaZmeny() {
     const kontejner = document.querySelector(".okres-zmena-kontejner");
     const ulozenyOkres = localStorage.getItem('vybranyOkres');
     
     if (ulozenyOkres && kontejner) {
-      kontejner.style.display = 'flex'; 
+      kontejner.style.display = 'flex';
     } else if (kontejner) {
-      kontejner.style.display = 'none';  
+      kontejner.style.display = 'none'; 
     }
   }
 
@@ -54,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function()
     {
       localStorage.setItem('vybranyOkres', okresSelect.value);
       if (okresOverlay) okresOverlay.style.display = 'none';
-      aktualizujViditelnostTlacitkaZmeny(); 
+      aktualizujViditelnostTlacitkaZmeny();
       nacistPrazdniny(); 
     };
   }
@@ -89,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function()
   // Kontrola, zda už má uživatel vybraný okres v paměti prohlížeče
   let ulozenyOkres = localStorage.getItem('vybranyOkres');
 
-  // Spustíme kontrolu viditelnosti hned na začátku
+  // Spustí se kontrola viditelnosti hned na začátku
   aktualizujViditelnostTlacitkaZmeny();
 
   if (!ulozenyOkres && okresOverlay)
@@ -276,7 +275,7 @@ document.addEventListener('DOMContentLoaded', function()
         clearInterval(interval);
       }
     }
-    checkTime();
+    幕 CheckTime();
     var interval = setInterval(checkTime, 1000);
   }
 
