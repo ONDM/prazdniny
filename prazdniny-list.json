@@ -21,7 +21,7 @@
     "dateEnd": "2026-02-08",
     "title": "Jarní prázdniny",
     "type": "jarni",
-    "okresy": ["Praha 1", "Praha 2", "Praha 3", "Praha 4", "Praha 5", "Blansko", "Vyškov", "Žďár nad Sázavou", "Karviná", "Most", "Teplice", "Znojmo"],
+    "okresy": ["Mladá Boleslav", "Příbram", "Tábor", "Prachatice", "Strakonice", "Ústí nad Labem", "Chomutov", "Most", "Jičín", "Rychnov nad Kněžnou", "Olomouc", "Šumperk", "Opava", "Jeseník"],
     "info": "Termín: 2. 2. – 8. 2. 2026"
   },
   {
@@ -29,7 +29,7 @@
     "dateEnd": "2026-02-15",
     "title": "Jarní prázdniny",
     "type": "jarni",
-    "okresy": ["Praha 6", "Praha 7", "Praha 8", "Praha 9", "Praha 10", "Cheb", "Karlovy Vary", "Sokolov", "Nymburk", "Jindřichův Hradec", "Litoměřice", "Přerov", "Frýdek-Místek"],
+    "okresy": ["Benešov", "Beroun", "Rokycany", "České Budějovice", "Český Krumlov", "Klatovy", "Trutnov", "Pardubice", "Chrudim", "Svitavy", "Ústí nad Orlicí", "Ostrava-město", "Prostějov"],
     "info": "Termín: 9. 2. – 15. 2. 2026"
   },
   {
@@ -37,7 +37,7 @@
     "dateEnd": "2026-02-22",
     "title": "Jarní prázdniny",
     "type": "jarni",
-    "okresy": ["Kroměříž", "Uherské Hradiště", "Vsetín", "Zlín", "Praha-východ", "Praha-západ", "Mělník", "Rakovník", "Plzeň-město", "Plzeň-sever", "Plzeň-jih", "Hradec Králové", "Nový Jičín"],
+    "okresy": ["Praha 1", "Praha 2", "Praha 3", "Praha 4", "Praha 5", "Blansko", "Brno-město", "Brno-venkov", "Břeclav", "Hodonín", "Vyškov", "Znojmo", "Domažlice", "Tachov", "Louny", "Karviná"],
     "info": "Termín: 16. 2. – 22. 2. 2026"
   },
   {
@@ -45,7 +45,7 @@
     "dateEnd": "2026-03-01",
     "title": "Jarní prázdniny",
     "type": "jarni",
-    "okresy": ["Česká Lípa", "Jablonec nad Nisou", "Liberec", "Semily", "Kladno", "Kolín", "Kutná Hora", "Písek", "Náchod", "Bruntál", "Opava"],
+    "okresy": ["Praha 6", "Praha 7", "Praha 8", "Praha 9", "Praha 10", "Cheb", "Karlovy Vary", "Sokolov", "Nymburk", "Jindřichův Hradec", "Litoměřice", "Děčín", "Přerov", "Frýdek-Místek"],
     "info": "Termín: 23. 2. – 1. 3. 2026"
   },
   {
@@ -53,7 +53,7 @@
     "dateEnd": "2026-03-08",
     "title": "Jarní prázdniny",
     "type": "jarni",
-    "okresy": ["Mladá Boleslav", "Příbram", "Strakonice", "Tábor", "Český Krumlov", "Prachatice", "Chomutov", "Jeseník", "Olomouc", "Šumperk", "Brno-město", "Brno-venkov", "Břeclav", "Hodonín"],
+    "okresy": ["Kroměříž", "Uherské Hradiště", "Vsetín", "Zlín", "Praha-východ", "Praha-západ", "Mělník", "Rakovník", "Plzeň-město", "Plzeň-sever", "Plzeň-jih", "Hradec Králové", "Teplice", "Nový Jičín"],
     "info": "Termín: 2. 3. – 8. 3. 2026"
   },
   {
@@ -61,7 +61,7 @@
     "dateEnd": "2026-03-15",
     "title": "Jarní prázdniny",
     "type": "jarni",
-    "okresy": ["Benešov", "Beroun", "Rokycany", "Tachov", "Louny", "Jičín", "Rychnov nad Kněžnou", "Svitavy", "Ústí nad Orlicí", "Ostrava-město", "Prostějov"],
+    "okresy": ["Česká Lípa", "Jablonec nad Nisou", "Liberec", "Semily", "Havlíčkův Brod", "Jihlava", "Pelhřimov", "Třebíč", "Žďár nad Sázavou", "Kladno", "Kolín", "Kutná Hora", "Písek", "Náchod", "Bruntál"],
     "info": "Termín: 9. 3. – 15. 3. 2026"
   },
   {
@@ -97,7 +97,7 @@
     "dateEnd": "2027-02-07",
     "title": "Jarní prázdniny",
     "type": "jarni",
-    "okresy": ["Praha 6", "Praha 7", "Praha 8", "Praha 9", "Praha 10", "Cheb", "Karlovy Vary", "Sokolov", "Nymburk", "Jindřichův Hradec", "Litoměřice", "Přerov", "Frýdek-Místek"],
+    "okresy": ["Česká Lípa", "Jablonec nad Nisou", "Liberec", "Semily", "Havlíčkův Brod", "Jihlava", "Pelhřimov", "Třebíč", "Žďár nad Sázavou", "Kladno", "Kolín", "Kutná Hora", "Písek", "Náchod", "Bruntál"],
     "info": "Termín: 1. 2. – 7. 2. 2027"
   },
   {
@@ -105,7 +105,7 @@
     "dateEnd": "2027-02-14",
     "title": "Jarní prázdniny",
     "type": "jarni",
-    "okresy": ["Kroměříž", "Uherské Hradiště", "Vsetín", "Zlín", "Praha-východ", "Praha-západ", "Mělník", "Rakovník", "Plzeň-město", "Plzeň-sever", "Plzeň-jih", "Hradec Králové", "Nový Jičín"],
+    "okresy": ["Mladá Boleslav", "Příbram", "Tábor", "Prachatice", "Strakonice", "Ústí nad Labem", "Chomutov", "Most", "Jičín", "Rychnov nad Kněžnou", "Olomouc", "Šumperk", "Opava", "Jeseník"],
     "info": "Termín: 8. 2. – 14. 2. 2027"
   },
   {
@@ -113,7 +113,7 @@
     "dateEnd": "2027-02-21",
     "title": "Jarní prázdniny",
     "type": "jarni",
-    "okresy": ["Česká Lípa", "Jablonec nad Nisou", "Liberec", "Semily", "Kladno", "Kolín", "Kutná Hora", "Písek", "Náchod", "Bruntál", "Opava"],
+    "okresy": ["Benešov", "Beroun", "Rokycany", "České Budějovice", "Český Krumlov", "Klatovy", "Trutnov", "Pardubice", "Chrudim", "Svitavy", "Ústí nad Orlicí", "Ostrava-město", "Prostějov"],
     "info": "Termín: 15. 2. – 21. 2. 2027"
   },
   {
@@ -121,7 +121,7 @@
     "dateEnd": "2027-02-28",
     "title": "Jarní prázdniny",
     "type": "jarni",
-    "okresy": ["Mladá Boleslav", "Příbram", "Strakonice", "Tábor", "Český Krumlov", "Prachatice", "Chomutov", "Jeseník", "Olomouc", "Šumperk", "Brno-město", "Brno-venkov", "Břeclav", "Hodonín"],
+    "okresy": ["Praha 1", "Praha 2", "Praha 3", "Praha 4", "Praha 5", "Blansko", "Brno-město", "Brno-venkov", "Břeclav", "Hodonín", "Vyškov", "Znojmo", "Domažlice", "Tachov", "Louny", "Karviná"],
     "info": "Termín: 22. 2. – 28. 2. 2027"
   },
   {
@@ -129,7 +129,7 @@
     "dateEnd": "2027-03-07",
     "title": "Jarní prázdniny",
     "type": "jarni",
-    "okresy": ["Benešov", "Beroun", "Rokycany", "Tachov", "Louny", "Jičín", "Rychnov nad Kněžnou", "Svitavy", "Ústí nad Orlicí", "Ostrava-město", "Prostějov"],
+    "okresy": ["Praha 6", "Praha 7", "Praha 8", "Praha 9", "Praha 10", "Cheb", "Karlovy Vary", "Sokolov", "Nymburk", "Jindřichův Hradec", "Litoměřice", "Děčín", "Přerov", "Frýdek-Místek"],
     "info": "Termín: 1. 3. – 7. 3. 2027"
   },
   {
@@ -137,7 +137,7 @@
     "dateEnd": "2027-03-14",
     "title": "Jarní prázdniny",
     "type": "jarni",
-    "okresy": ["Praha 1", "Praha 2", "Praha 3", "Praha 4", "Praha 5", "Blansko", "Vyškov", "Žďár nad Sázavou", "Karviná", "Most", "Teplice", "Znojmo"],
+    "okresy": ["Kroměříž", "Uherské Hradiště", "Vsetín", "Zlín", "Praha-východ", "Praha-západ", "Mělník", "Rakovník", "Plzeň-město", "Plzeň-sever", "Plzeň-jih", "Hradec Králové", "Teplice", "Nový Jičín"],
     "info": "Termín: 8. 3. – 14. 3. 2027"
   },
   {
@@ -173,7 +173,7 @@
     "dateEnd": "2028-02-13",
     "title": "Jarní prázdniny",
     "type": "jarni",
-    "okresy": ["Kroměříž", "Uherské Hradiště", "Vsetín", "Zlín", "Praha-východ", "Praha-západ", "Mělník", "Rakovník", "Plzeň-město", "Plzeň-sever", "Plzeň-jih", "Hradec Králové", "Nový Jičín"],
+    "okresy": ["Kroměříž", "Uherské Hradiště", "Vsetín", "Zlín", "Praha-východ", "Praha-západ", "Mělník", "Rakovník", "Plzeň-město", "Plzeň-sever", "Plzeň-jih", "Hradec Králové", "Teplice", "Nový Jičín"],
     "info": "Termín: 7. 2. – 13. 2. 2028"
   },
   {
@@ -181,7 +181,7 @@
     "dateEnd": "2028-02-20",
     "title": "Jarní prázdniny",
     "type": "jarni",
-    "okresy": ["Česká Lípa", "Jablonec nad Nisou", "Liberec", "Semily", "Kladno", "Kolín", "Kutná Hora", "Písek", "Náchod", "Bruntál", "Opava"],
+    "okresy": ["Česká Lípa", "Jablonec nad Nisou", "Liberec", "Semily", "Havlíčkův Brod", "Jihlava", "Pelhřimov", "Třebíč", "Žďár nad Sázavou", "Kladno", "Kolín", "Kutná Hora", "Písek", "Náchod", "Bruntál"],
     "info": "Termín: 14. 2. – 20. 2. 2028"
   },
   {
@@ -189,7 +189,7 @@
     "dateEnd": "2028-02-27",
     "title": "Jarní prázdniny",
     "type": "jarni",
-    "okresy": ["Mladá Boleslav", "Příbram", "Strakonice", "Tábor", "Český Krumlov", "Prachatice", "Chomutov", "Jeseník", "Olomouc", "Šumperk", "Brno-město", "Brno-venkov", "Břeclav", "Hodonín"],
+    "okresy": ["Mladá Boleslav", "Příbram", "Tábor", "Prachatice", "Strakonice", "Ústí nad Labem", "Chomutov", "Most", "Jičín", "Rychnov nad Kněžnou", "Olomouc", "Šumperk", "Opava", "Jeseník"],
     "info": "Termín: 21. 2. – 27. 2. 2028"
   },
   {
@@ -197,7 +197,7 @@
     "dateEnd": "2028-03-05",
     "title": "Jarní prázdniny",
     "type": "jarni",
-    "okresy": ["Benešov", "Beroun", "Rokycany", "Tachov", "Louny", "Jičín", "Rychnov nad Kněžnou", "Svitavy", "Ústí nad Orlicí", "Ostrava-město", "Prostějov"],
+    "okresy": ["Benešov", "Beroun", "Rokycany", "České Budějovice", "Český Krumlov", "Klatovy", "Trutnov", "Pardubice", "Chrudim", "Svitavy", "Ústí nad Orlicí", "Ostrava-město", "Prostějov"],
     "info": "Termín: 28. 2. – 5. 3. 2028"
   },
   {
@@ -205,7 +205,7 @@
     "dateEnd": "2028-03-12",
     "title": "Jarní prázdniny",
     "type": "jarni",
-    "okresy": ["Praha 1", "Praha 2", "Praha 3", "Praha 4", "Praha 5", "Blansko", "Vyškov", "Žďár nad Sázavou", "Karviná", "Most", "Teplice", "Znojmo"],
+    "okresy": ["Praha 1", "Praha 2", "Praha 3", "Praha 4", "Praha 5", "Blansko", "Brno-město", "Brno-venkov", "Břeclav", "Hodonín", "Vyškov", "Znojmo", "Domažlice", "Tachov", "Louny", "Karviná"],
     "info": "Termín: 6. 3. – 12. 3. 2028"
   },
   {
@@ -213,7 +213,7 @@
     "dateEnd": "2028-03-19",
     "title": "Jarní prázdniny",
     "type": "jarni",
-    "okresy": ["Praha 6", "Praha 7", "Praha 8", "Praha 9", "Praha 10", "Cheb", "Karlovy Vary", "Sokolov", "Nymburk", "Jindřichův Hradec", "Litoměřice", "Přerov", "Frýdek-Místek"],
+    "okresy": ["Praha 6", "Praha 7", "Praha 8", "Praha 9", "Praha 10", "Cheb", "Karlovy Vary", "Sokolov", "Nymburk", "Jindřichův Hradec", "Litoměřice", "Děčín", "Přerov", "Frýdek-Místek"],
     "info": "Termín: 13. 3. – 19. 3. 2028"
   },
   {
